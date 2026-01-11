@@ -53,18 +53,6 @@ class AppTheme {
   }
 
   static ThemeData lightTheme() {
-    final baseTextStyle = TextStyle(
-      fontFamilyFallback: const [
-        'Segoe UI',
-        'Arial',
-        'Helvetica',
-        'sans-serif',
-        'Noto Color Emoji',
-        'Apple Color Emoji',
-        'Segoe UI Emoji',
-      ],
-    );
-
     return ThemeData(
       useMaterial3: true,
       brightness: Brightness.light,
@@ -153,95 +141,11 @@ class AppTheme {
         thickness: 0.5,
         space: 0.5,
       ),
-      textTheme: TextTheme(
-        displayLarge: baseTextStyle.copyWith(
-          color: lightTextPrimary,
-          fontWeight: FontWeight.w600,
-          fontSize: baseTextStyle.fontSize! * 3.5,
-        ),
-        displayMedium: baseTextStyle.copyWith(
-          color: lightTextPrimary,
-          fontWeight: FontWeight.w600,
-          fontSize: baseTextStyle.fontSize! * 2.8,
-        ),
-        displaySmall: baseTextStyle.copyWith(
-          color: lightTextPrimary,
-          fontWeight: FontWeight.w600,
-          fontSize: baseTextStyle.fontSize! * 2.2,
-        ),
-        headlineLarge: baseTextStyle.copyWith(
-          color: lightTextPrimary,
-          fontWeight: FontWeight.w600,
-          fontSize: baseTextStyle.fontSize! * 2.0,
-        ),
-        headlineMedium: baseTextStyle.copyWith(
-          color: lightTextPrimary,
-          fontWeight: FontWeight.w600,
-          fontSize: baseTextStyle.fontSize! * 1.75,
-        ),
-        headlineSmall: baseTextStyle.copyWith(
-          color: lightTextPrimary,
-          fontWeight: FontWeight.w600,
-          fontSize: baseTextStyle.fontSize! * 1.5,
-        ),
-        titleLarge: baseTextStyle.copyWith(
-          color: lightTextPrimary,
-          fontWeight: FontWeight.w600,
-          fontSize: baseTextStyle.fontSize! * 1.375,
-        ),
-        titleMedium: baseTextStyle.copyWith(
-          color: lightTextPrimary,
-          fontWeight: FontWeight.w500,
-          fontSize: baseTextStyle.fontSize! * 1.125,
-        ),
-        titleSmall: baseTextStyle.copyWith(
-          color: lightTextPrimary,
-          fontWeight: FontWeight.w500,
-        ),
-        bodyLarge: baseTextStyle.copyWith(
-          color: lightTextPrimary,
-          fontWeight: FontWeight.w400,
-          fontSize: baseTextStyle.fontSize! * 1.125,
-        ),
-        bodyMedium: baseTextStyle.copyWith(
-          color: lightTextPrimary,
-          fontWeight: FontWeight.w400,
-        ),
-        bodySmall: baseTextStyle.copyWith(
-          color: lightTextSecondary,
-          fontWeight: FontWeight.w400,
-          fontSize: baseTextStyle.fontSize! * 0.875,
-        ),
-        labelLarge: baseTextStyle.copyWith(
-          color: lightTextPrimary,
-          fontWeight: FontWeight.w500,
-        ),
-        labelMedium: baseTextStyle.copyWith(
-          color: lightTextSecondary,
-          fontWeight: FontWeight.w500,
-          fontSize: baseTextStyle.fontSize! * 0.875,
-        ),
-        labelSmall: baseTextStyle.copyWith(
-          color: lightTextSecondary,
-          fontWeight: FontWeight.w500,
-          fontSize: baseTextStyle.fontSize! * 0.75,
-        ),
-      ),
     );
   }
 
   static ThemeData darkTheme() {
-    final baseTextStyle = TextStyle(
-      fontFamilyFallback: const [
-        'Segoe UI',
-        'Arial',
-        'Helvetica',
-        'sans-serif',
-        'Noto Color Emoji',
-        'Apple Color Emoji',
-        'Segoe UI Emoji',
-      ],
-    );
+
 
     return ThemeData(
       useMaterial3: true,
@@ -330,80 +234,6 @@ class AppTheme {
         color: darkDivider,
         thickness: 1,
         space: 1,
-      ),
-      textTheme: TextTheme(
-        displayLarge: baseTextStyle.copyWith(
-          color: darkTextPrimary,
-          fontWeight: FontWeight.w600,
-          fontSize: baseTextStyle.fontSize! * 3.5,
-        ),
-        displayMedium: baseTextStyle.copyWith(
-          color: darkTextPrimary,
-          fontWeight: FontWeight.w600,
-          fontSize: baseTextStyle.fontSize! * 2.8,
-        ),
-        displaySmall: baseTextStyle.copyWith(
-          color: darkTextPrimary,
-          fontWeight: FontWeight.w600,
-          fontSize: baseTextStyle.fontSize! * 2.2,
-        ),
-        headlineLarge: baseTextStyle.copyWith(
-          color: darkTextPrimary,
-          fontWeight: FontWeight.w600,
-          fontSize: baseTextStyle.fontSize! * 2.0,
-        ),
-        headlineMedium: baseTextStyle.copyWith(
-          color: darkTextPrimary,
-          fontWeight: FontWeight.w600,
-          fontSize: baseTextStyle.fontSize! * 1.75,
-        ),
-        headlineSmall: baseTextStyle.copyWith(
-          color: darkTextPrimary,
-          fontWeight: FontWeight.w600,
-          fontSize: baseTextStyle.fontSize! * 1.5,
-        ),
-        titleLarge: baseTextStyle.copyWith(
-          color: darkTextPrimary,
-          fontWeight: FontWeight.w600,
-          fontSize: baseTextStyle.fontSize! * 1.375,
-        ),
-        titleMedium: baseTextStyle.copyWith(
-          color: darkTextPrimary,
-          fontWeight: FontWeight.w500,
-          fontSize: baseTextStyle.fontSize! * 1.125,
-        ),
-        titleSmall: baseTextStyle.copyWith(
-          color: darkTextPrimary,
-          fontWeight: FontWeight.w500,
-        ),
-        bodyLarge: baseTextStyle.copyWith(
-          color: darkTextPrimary,
-          fontWeight: FontWeight.w400,
-          fontSize: baseTextStyle.fontSize! * 1.125,
-        ),
-        bodyMedium: baseTextStyle.copyWith(
-          color: darkTextPrimary,
-          fontWeight: FontWeight.w400,
-        ),
-        bodySmall: baseTextStyle.copyWith(
-          color: darkTextSecondary,
-          fontWeight: FontWeight.w400,
-          fontSize: baseTextStyle.fontSize! * 0.875,
-        ),
-        labelLarge: baseTextStyle.copyWith(
-          color: darkTextPrimary,
-          fontWeight: FontWeight.w500,
-        ),
-        labelMedium: baseTextStyle.copyWith(
-          color: darkTextSecondary,
-          fontWeight: FontWeight.w500,
-          fontSize: baseTextStyle.fontSize! * 0.875,
-        ),
-        labelSmall: baseTextStyle.copyWith(
-          color: darkTextSecondary,
-          fontWeight: FontWeight.w500,
-          fontSize: baseTextStyle.fontSize! * 0.75,
-        ),
       ),
     );
   }
