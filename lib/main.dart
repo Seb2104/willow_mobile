@@ -23,7 +23,7 @@ class _MainAppState extends State<MainApp> {
           height: MediaQuery.of(context).size.height * 1,
           width: MediaQuery.of(context).size.width * 1,
           decoration: BoxDecoration(color: AppTheme.surface(context)),
-          child: Center(child: Text('Willow')),
+          child: Center(child: Text('Willow - Mobile')),
         ),
       ),
     );
