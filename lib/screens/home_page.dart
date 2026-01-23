@@ -24,12 +24,12 @@ class _HomePageState extends State<HomePage> {
             ],
           ),
         ),
-        body: const TabBarView(
+        body: TabBarView(
           children: <Widget>[
             FormatToolbar(),
-            InsertToolbar(),
-            ReviewToolbar(),
-            ExportToolbar(),
+            const InsertToolbar(),
+            const ReviewToolbar(),
+            const ExportToolbar(),
           ],
         ),
       ),
@@ -37,41 +37,117 @@ class _HomePageState extends State<HomePage> {
   }
 }
 
-class FormatToolbar extends StatelessWidget {
+class FormatToolbar extends StatefulWidget {
   const FormatToolbar({super.key});
+
+  @override
+  State<FormatToolbar> createState() => _FormatToolbarState();
+}
+
+class _FormatToolbarState extends State<FormatToolbar> {
+  bool _isExpanded = false;
 
   @override
   Widget build(BuildContext context) {
     return Align(
       alignment: Alignment.topLeft,
       child: Container(
-        padding: const EdgeInsets.all(8),
-        child: Row(
+        padding: const EdgeInsets.all(0),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
           children: [
-            IconButton(icon: const Icon(Icons.format_bold), onPressed: () {}),
-            IconButton(icon: const Icon(Icons.format_italic), onPressed: () {}),
-            IconButton(icon: const Icon(Icons.format_underlined), onPressed: () {}),
-            IconButton(icon: const Icon(Icons.strikethrough_s), onPressed: () {}),
-            IconButton(icon: const Icon(Icons.format_size), onPressed: () {}), // font size
-            IconButton(icon: const Icon(Icons.format_color_text), onPressed: () {}), // text color
-            IconButton(icon: const Icon(Icons.format_color_fill), onPressed: () {}), // highlight
-            IconButton(icon: const Icon(Icons.format_align_left), onPressed: () {}),
-            IconButton(icon: const Icon(Icons.format_align_center), onPressed: () {}),
-            IconButton(icon: const Icon(Icons.format_align_right), onPressed: () {}),
-            IconButton(icon: const Icon(Icons.format_align_justify), onPressed: () {}),
-            IconButton(icon: const Icon(Icons.format_list_bulleted), onPressed: () {}),
-            IconButton(icon: const Icon(Icons.format_list_numbered), onPressed: () {}),
-            IconButton(icon: const Icon(Icons.format_indent_increase), onPressed: () {}),
-            IconButton(icon: const Icon(Icons.format_indent_decrease), onPressed: () {}),
-            IconButton(icon: const Icon(Icons.format_line_spacing), onPressed: () {}), // line spacing!
-            IconButton(icon: const Icon(Icons.format_quote), onPressed: () {}),
-            IconButton(icon: const Icon(Icons.font_download), onPressed: () {}), // font family,
+            Row(
+              children: [
+                IconButton(icon: betterIcon(Icons.format_bold), onPressed: () {}),
+                IconButton(icon: betterIcon(Icons.format_italic), onPressed: () {}),
+                IconButton(
+                  icon: betterIcon(Icons.format_underlined),
+                  onPressed: () {},
+                ),
+                IconButton(
+                  icon: betterIcon(Icons.strikethrough_s),
+                  onPressed: () {},
+                ),
+                IconButton(icon: betterIcon(Icons.format_size), onPressed: () {}),
+                IconButton(
+                  icon: betterIcon(Icons.format_color_text),
+                  onPressed: () {},
+                ),
+                IconButton(
+                  icon: betterIcon(
+                      _isExpanded ? Icons.keyboard_arrow_up : Icons.keyboard_arrow_down
+                  ),
+                  onPressed: () {
+                    setState(() {
+                      _isExpanded = !_isExpanded;
+                    });
+                  },
+                ),
+              ],
+            ),
+            if (_isExpanded)
+              Row(
+                children: [
+                  IconButton(
+                    icon: betterIcon(Icons.format_color_fill),
+                    onPressed: () {},
+                  ),
+                  IconButton(
+                    icon: betterIcon(Icons.format_align_left),
+                    onPressed: () {},
+                  ),
+                  IconButton(
+                    icon: betterIcon(Icons.format_align_center),
+                    onPressed: () {},
+                  ),
+                  IconButton(
+                    icon: betterIcon(Icons.format_align_right),
+                    onPressed: () {},
+                  ),
+                  IconButton(
+                    icon: betterIcon(Icons.format_align_justify),
+                    onPressed: () {},
+                  ),
+                  IconButton(
+                    icon: betterIcon(Icons.format_list_bulleted),
+                    onPressed: () {},
+                  ),
+                ],
+              ),
+            if (_isExpanded)
+              Row(
+                children: [
+                  IconButton(
+                    icon: betterIcon(Icons.format_list_numbered),
+                    onPressed: () {},
+                  ),
+                  IconButton(
+                    icon: betterIcon(Icons.format_indent_increase),
+                    onPressed: () {},
+                  ),
+                  IconButton(
+                    icon: betterIcon(Icons.format_indent_decrease),
+                    onPressed: () {},
+                  ),
+                  IconButton(
+                    icon: betterIcon(Icons.format_line_spacing),
+                    onPressed: () {},
+                  ),
+                  IconButton(icon: betterIcon(Icons.format_quote), onPressed: () {}),
+                  IconButton(icon: betterIcon(Icons.font_download), onPressed: () {}),
+                ],
+              ),
           ],
         ),
       ),
     );
-
   }
+}
+
+double _iconSize = 24;
+
+Widget betterIcon(IconData icon) {
+  return Icon(icon, size: _iconSize);
 }
 
 class InsertToolbar extends StatelessWidget {
