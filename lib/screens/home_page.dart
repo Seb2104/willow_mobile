@@ -10,11 +10,11 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   final Map<String, Widget> demoContent = const {
-    'First': First(),
-    'Second': Second(),
-    'Third': Third(),
-    'Fourth': Fourth(),
-    'Fifth': Fifth(),
+    'Format': First(),
+    'Insert': Second(),
+    'Review': Third(),
+    'i forgot': Fourth(),
+    'Uhhh poopy': Fifth(),
   };
 
   @override

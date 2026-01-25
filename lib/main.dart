@@ -21,7 +21,7 @@ class _MainAppState extends State<MainApp> {
       debugShowCheckedModeBanner: false,
       theme: AppTheme.lightTheme(),
       title: 'Willow',
-      home: const LandingPage(), // 👈 changed to LandingPage
+      home: const LandingPage(),
     );
   }
 }
