@@ -23,6 +23,7 @@ dependencies:
   follow_the_leader: any
   overlord: any
   petitparser: ^7.0.1
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -31,10 +32,14 @@ dev_dependencies:
 flutter:
   uses-material-design: true
 
+  assets:
+    - assets/images/
+
   fonts:
     - family: AppleColorEmoji
       fonts:
         - asset: assets/fonts/AppleColorEmoji.ttf
+
 
     - family: CrimsonPro
       fonts:

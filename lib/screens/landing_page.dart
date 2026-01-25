@@ -15,12 +15,26 @@ class LandingPage extends StatelessWidget {
           padding: EdgeInsets.zero,
           children: [
             Container(
-              height: 70, //WHAT DO I EVWN SAY IN THE HEADER AND ASK SQUISHY HOW TO CHANGE ITS COLOR
-              color: Colors.lightGreen,
+              height: 200, //WHAT DO I EVWN SAY IN THE HEADER AND ASK SQUISHY HOW TO CHANGE ITS COLOR
+              color: const Color(0xFFA2C197),
+
               alignment: Alignment.bottomCenter,
               padding: EdgeInsets.all(8),
-              child: const Text('uhhhh tittle titty title? '), // figure out title you bum, maybe you can have it say willow or something
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  Image.asset(
+                    'assets/images/icon.png',
+                    height: 100,
+                    width: 100,
+                  ),
+                  const SizedBox(height: 8),
+                   Text('Willow ', style: TextStyle(fontFamily: 'Times New Roman', fontSize: 35),),
+                  Text('idk something quote something im silly')// figure out title you bum, maybe you can have it say willow or something
+                ],
+              ),
             ),
+
 
             //ACTION BUTTON ICON BLRH BUHF
             Padding(
@@ -39,7 +53,7 @@ class LandingPage extends StatelessWidget {
                     label: const Align(
                       alignment: Alignment.centerLeft,
                       child: Text(
-                        'Setings',
+                        'Settings',
                         style: TextStyle(color: Colors.black),
                       ),
                     ),
@@ -56,7 +70,7 @@ class LandingPage extends StatelessWidget {
                     label: const Align(
                       alignment: Alignment.centerLeft,
                       child: Text(
-                        'recycle bin',
+                        'Recycle Bin',
                         style: TextStyle(color: Colors.black),
                       ),
                     ),
