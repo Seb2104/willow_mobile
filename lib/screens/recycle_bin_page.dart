@@ -7,7 +7,7 @@ class RecycleBinPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text('Recycle Bin')),
-      body:  Center(child:Text('Recycle Bin Page: my husband is so fucking smart')),
+      body:  Center(child:Text('Recycle Bin Page: my husband is so fucking smart, geniusssssss')),
     );
   }
 }
