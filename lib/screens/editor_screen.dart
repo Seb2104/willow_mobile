@@ -66,9 +66,7 @@ class _EditorScreenState extends State<EditorScreen> {
     );
   }
 
-  // ---------------------------
-  // SAVE / DELETE
-  // ---------------------------
+//SAVE ME AND DELETE MEE
 
   Future<void> _saveDocument() async {
     final now = DateTime.now();
@@ -102,9 +100,7 @@ class _EditorScreenState extends State<EditorScreen> {
     }
   }
 
-  // ---------------------------
-  // SERIALIZATION
-  // ---------------------------
+ //CERIALIZATION
 
   String _serializeContent() {
     final buffer = StringBuffer();
@@ -149,9 +145,7 @@ class _EditorScreenState extends State<EditorScreen> {
     return nodes;
   }
 
-  // ---------------------------
-  // UI
-  // ---------------------------
+//PENOUTHG
 
   @override
   Widget build(BuildContext context) {
@@ -191,9 +185,7 @@ class _EditorScreenState extends State<EditorScreen> {
     );
   }
 
-  // ---------------------------
-  // TOOLBAR (UNCHANGED)
-  // ---------------------------
+ //TOOLY BARRRRR
 
   Widget _buildToolbar() {
     final selection = _composer.selection;
