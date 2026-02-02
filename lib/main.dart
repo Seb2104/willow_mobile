@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:willow_mobile/app-theme.dart';
-import 'screens/home_page.dart';
-import 'screens/landing_page.dart'; // 👈 added import
+import 'screens/landing_page.dart';
 
 void main() {
   runApp(const MainApp());
